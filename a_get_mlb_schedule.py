@@ -211,8 +211,8 @@ def _extract_game_row(game: Dict[str, Any], all_teams: Dict[int, str]) -> Dict[s
     away_record = game["teams"]["away"].get("leaguerecord", {})
 
     return {
-        "date": game.get("gameDate", ""),
-        "game_pk": game.get("gamePk", ""),
+        "date": game.get("gamedate", ""),
+        "game_pk": game.get("gamepk", ""),
         "home_id": home_team_id,
         "home_team": all_teams.get(home_team_id, "UNKNOWN"),
         "home_record": _format_record(home_record),
